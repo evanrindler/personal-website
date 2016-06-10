@@ -13,3 +13,7 @@
 .form-group p {
 	font-style: italic;
 }
+
+form {
+    margin-bottom: 2em;
+}

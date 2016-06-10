@@ -1,4 +1,16 @@
 $(document).ready(function() {
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyD7Ruo7xhSTzAqBsyAaDkYB0Qj3sB6M63o",
+		authDomain: "nbn-commencement.firebaseapp.com",
+		databaseURL: "https://nbn-commencement.firebaseio.com",
+		storageBucket: "nbn-commencement.appspot.com",
+	};
+	firebase.initializeApp(config);
+
+	var db = firebase.database();
+	var submissionsRef = db.ref().child('submissions');
+
 	// text formatting
 	$('#paragraph').on('click', function() {
 		$('#entryText').selection('insert', {text:'<p>', mode: 'before'}).selection('insert', {text: '</p>', mode: 'after'});
@@ -25,36 +37,29 @@ $(document).ready(function() {
 	// save entry
 	$('form').submit(function(event) {
 		event.preventDefault();
-		var Entry = Parse.Object.extend("Entry");
+		var headline = event.currentTarget.headline.value;
+		var author = event.currentTarget.author.value;
+		var twitter = event.currentTarget.twitter.value;
+		var image = event.currentTarget.media.value;
+		var bio = event.currentTarget.bio.value;
+		var pullquote = event.currentTarget.pullquote.value;
+		var entryText = event.currentTarget.entryText.value;
 
-		var entry = new Entry();
+		var entryObj = {
+            headline: headline,
+            author: author,
+            twitter_acct: twitter,
+            img: image,
+            author_bio: bio,
+            pullquote: pullquote,
+            text: entryText
+        };
 
-		var entryTopics = $('input[type="radio"]:checked').val();
-		// var entryTopics = [];
-		// var checkboxes = $('input[type="checkbox"]:checked');
-		// for (var i = 0; i < checkboxes.length; i++) {
-		// 	entryTopics.push(checkboxes[i].value);
-		// }
+        submissionsRef.push(entryObj);
 
-		entry.save({
-			subject: event.currentTarget.subject.value,
-			author: event.currentTarget.author.value,
-			media: event.currentTarget.media.value,
-			credit: event.currentTarget.credit.value,
-			topic: entryTopics,
-			pullquote: event.currentTarget.pullquote.value,
-			entryText: event.currentTarget.entryText.value
-		}, {
-			success: function(entry) {
-				$('form').find('input[type="text"], textarea').val("");
-				// $('form').find('input[type="checkbox"]').removeAttr("checked");
-				$('form').find('input[type="radio"]').removeAttr("checked");
-				$('form').prepend('<p class="bg-success">Saved</p>');
-			},
-			error: function(entry, error) {
-
-			}
-		});
+        $('form').find('input[type="text"], textarea').val("");
+		$('.bg-success').remove();
+		$('form').prepend('<p class="bg-success">Saved</p>');
 	});
 
 });

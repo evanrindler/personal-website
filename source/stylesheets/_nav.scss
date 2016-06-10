@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+.masthead {
+    background-color: #501f84;
+    padding: .5em 0 .375em;
+    text-align: left;
+    width: 100%;
+
+    a {
+        color: #501f84;
+        text-decoration: none;
+        background: transparent;
+    }
+
+    .nbn-logo {
+        height: 2em;
+    }
+
+    .logo {
+        padding-left: .5em;
+
+    }
+
+    .extra-masthead {
+        color: white;
+        display: inline-table;
+        font-weight: 700;
+        height: 100%;
+        position: relative;
+        top: -.5em;
+        padding-left: 1em;
+
+        a {
+            color: white;
+            display: table-cell;
+            margin-left: .25em;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}

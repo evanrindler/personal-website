@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+footer {
+    font-family: Helvetica, sans-serif;
+    background-color: $nbn-purple;
+    color: white;
+    margin-top: 50px;
+    padding-bottom: .5em;
+    padding-top: .5em;
+    width: 100%;
+}
+
+.credits-container {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.25em;
+}
+
+.credits {
+    padding-bottom: .5em;
+    padding-top: .5em;
+
+    p {
+        font-size: .875em;
+        line-height: 1.5em;
+        margin: 0;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}

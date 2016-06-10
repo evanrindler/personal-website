@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>NBN Year in Media 2015 Submissions</title>
+		<title>Commencement 2016 Submissions</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
@@ -12,49 +12,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>NBN Year in Media 2015 Entries</h1>
+                    <h1>Commencement 2016 Entries</h1>
                 </div>
             </div>
     		<form>
                 <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input class="form-control" type="text" id="subject" placeholder="Bob's Burgers">
+                    <label for="headline">Headline</label>
+                    <input class="form-control" type="text" id="headline" placeholder="Bob's Burgers">
                 </div>
                 <div class="form-group">
                     <label for="author">Author</label>
                     <input class="form-control" type="text" id="author" placeholder="Tina Belcher">
                 </div>
                 <div class="form-group">
-                    <label for="media">Media (image or Youtube embed link)</label>
-                    <p>Upload images to Django, then copy and paste image upload link here OR copy and paste an image link ending in a file extension like '.jpg' or '.png' (larger images i.e. 500px or wider)</p>
+                    <label for="twitter">Twitter Username</label>
+                    <input class="form-control" type="text" id="twitter" placeholder="@tinabelcher">
+                </div>
+                <div class="form-group">
+                    <label for="media">Image</label>
+                    <p>Upload images to Django, then copy and paste image upload link here</p>
                     <input class="form-control" type="text" id="media" placeholder="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/10/05/4786112023_6ec85a80d6_b.jpg">
                 </div>
                 <div class="form-group">
-                    <label for="credit">Image Credit (if using Flickr)</label>
-                    <p>Enter as you would in Django i.e. "Photo by Jimmy Pesto on Flickr. Licensed under Creative Commons."
-                    <input class="form-control" type="text" id="credit" placeholder="Photo by Jimmy Pesto on Flickr. Licensed under Creative Commons.">
-                </div>
-                <div class="form-group">
-                    <label for="topics">Topics</label>
-                    <br>
-                    <label class="radio-inline" id="topics">
-                        <input type="radio" id="topics1" value="media"> Media
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" id="topics2" value="politics"> Politics
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" id="topics3" value="entertainment"> Entertainment
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" id="topics4" value="science"> Science
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" id="topics5" value="sports"> Sports
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" id="topics6" value="television"> Television
-                    </label>
+                    <label for="bio">Author Bio</label>
+                    <input class="form-control" type="text" id="bio" placeholder="Phasellus sodales volutpat libero, sit amet hendrerit lacus luctus et. In id molestie nisi.">
                 </div>
                 <div class="form-group">
                     <label for="pullquote">Pullquote</label>
@@ -97,8 +78,9 @@
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="http://www.parsecdn.com/js/parse-1.6.11.min.js"></script>
         <script src="js/jquery.selection.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 		<script src="js/script.js"></script>
+
 	</body>
 </html>

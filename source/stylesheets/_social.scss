@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.share-icons {
+    padding-bottom: 10px;
+}
+
+.social {
+  padding: 0;
+  margin: 0;
+
+  a {
+    color: $off-black;
+  }
+
+  li {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+
+    a {
+      display: block;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    span {
+      position: relative;
+      top: 10px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: green;
+    }
+  }
+}
