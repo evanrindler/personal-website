@@ -4,51 +4,30 @@ title: Commencement 2016 | North by Northwestern
 ---
 
 <div class="intro">
-	<a href="http://apps.northbynorthwestern.com/year-in-media/2015/" target="_blank">
+	<a href="http://apps.northbynorthwestern.com/commencement/2016/" target="_blank">
     	<p>North by Northwestern</p>
     	<span>Commencement 2016</span>
     </a>
 </div>
 
 <div class="container">
-    <div class="clearfix">
-        <div class="grid-entry">
-            <img class="circular" src="https://media.licdn.com/media/AAEAAQAAAAAAAADYAAAAJDA2ZDJjMjUxLWU0MGMtNGQyOC1hNTY1LWRmNzEzNzlmY2IyMg.jpg" />
-            <div class="story-content clearfix">
-                <p class="story-title">Unofficial Transcript</p>
-                <p class="story-author">Lucy Wang</p>
-                <p class="story-pullquote">"I want to look back on these past four years confident that I gave my time generously to people and causes I care about, that I also took time for myself and that sometimes, just sometimes, I got my eight hours of shut-eye."</p>
-            </div>
-        </div>
-        <div class="grid-entry">
-            <img class="circular" src="https://media.licdn.com/media/AAEAAQAAAAAAAADYAAAAJDA2ZDJjMjUxLWU0MGMtNGQyOC1hNTY1LWRmNzEzNzlmY2IyMg.jpg" />
-            <div class="story-content clearfix">
-                <p class="story-title">Unofficial Transcript</p>
-                <p class="story-author">Lucy Wang</p>
-                <p class="story-pullquote">"I want to look back on these past four years confident that I gave my time generously to people and causes I care about, that I also took time for myself and that sometimes, just sometimes, I got my eight hours of shut-eye."</p>
-            </div>
-        </div>
-        <div class="grid-entry">
-            <img class="circular" src="https://media.licdn.com/media/AAEAAQAAAAAAAADYAAAAJDA2ZDJjMjUxLWU0MGMtNGQyOC1hNTY1LWRmNzEzNzlmY2IyMg.jpg" />
-            <div class="story-content clearfix">
-                <p class="story-title">Unofficial Transcript</p>
-                <p class="story-author">Lucy Wang</p>
-                <p class="story-pullquote">"I want to look back on these past four years confident that I gave my time generously to people and causes I care about, that I also took time for myself and that sometimes, just sometimes, I got my eight hours of shut-eye."</p>
-            </div>
-        </div>
-    </div>
-
     <% data.entry.submissions.each_with_index do |e, i| %>
         <% if [0, 3, 6, 9, 12, 15, 18].include? i %>
             <div class="clearfix">
         <% end %>
-        <div class="grid-entry">
-            <img class="circular" src="<%= e.img%>" />
-            <div class="story-content clearfix">
-                <p class="story-title"><%= e.headline %></p>
-                <p class="story-author"><%= e.author %></p>
-                <p class="story-pullquote"><%= e.pullquote %></p>
-            </div>
+        <% relative_path = "story/" %>
+        <% story_link = "#{e.slug}/" %>
+        <div class="grid-entry-pos">
+            <a href= <%= relative_path %><%= story_link %> >
+                <div class="grid-entry">
+                    <img class="circular" src="<%= e.img %>" />
+                    <div class="story-content clearfix">
+                        <p class="story-title"><%= e.headline %></p>
+                        <p class="story-author"><%= e.author %></p>
+                        <p class="story-pullquote"><%= e.pullquote %></p>
+                    </div>
+                </div>
+            </a>
         </div>
         <% if [2, 5, 8, 11, 14, 17].include? i %>
             </div>

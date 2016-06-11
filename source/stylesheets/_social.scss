@@ -1,5 +1,44 @@
 @charset "utf-8";
 
+// font icon
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot?vcxnuv');
+    src:url('fonts/icomoon.eot?#iefixvcxnuv') format('embedded-opentype'),
+        url('fonts/icomoon.woff?vcxnuv') format('woff'),
+        url('fonts/icomoon.ttf?vcxnuv') format('truetype'),
+        url('fonts/icomoon.svg?vcxnuv#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-point-up:before {
+    content: "\ea03";
+}
+
+.icon-facebook:before {
+    content: "\ea8c";
+}
+
+.icon-twitter:before {
+    content: "\ea91";
+}
+
 .share-icons {
     padding-bottom: 10px;
 }
@@ -9,7 +48,7 @@
   margin: 0;
 
   a {
-    color: $off-black;
+    color: $nbn-purple;
   }
 
   li {
@@ -30,7 +69,7 @@
 
     &:hover {
       cursor: pointer;
-      color: green;
+      color: $off-black;
     }
   }
 }

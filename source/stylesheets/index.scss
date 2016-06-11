@@ -27,6 +27,15 @@ body {
     position: relative;
 }
 
+.extra-masthead {
+  font-family: $font-stack;
+  letter-spacing: 1px;
+}
+
+.circular {
+    width: 100%;
+}
+
 .intro {
   font-family: $font-stack;
   width: inherit;
@@ -69,22 +78,24 @@ p {
     margin-top: 2em;
 }
 
-.grid-entry {
+.grid-entry, {
     float: left;
     background-color: $white;
     width: 32%;
     margin-bottom: 2em;
     margin-right: 2%;
-
-    &:last-child {
-        margin-right: 0;
-    }
 }
 
-.circular {
-    width: 100%;
-    // object-fit: cover;
-    // border-radius: 50%;
+.grid-entry-pos {
+    a {
+        color: $off-black;
+    }
+
+    &:last-child {
+        .grid-entry {
+            margin-right: 0;
+        }   
+    }
 }
 
 .story-content {
@@ -96,6 +107,7 @@ p {
         font-weight: 400;
         margin-bottom: 5px;
         text-transform: uppercase;
+        color: $nbn-purple;
     }
 
     .story-author {

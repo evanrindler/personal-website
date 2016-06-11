@@ -35,14 +35,15 @@ configure :build do
   # Enable cache buster
   activate :asset_hash
 
-  data.entry.results.each do |entry|
+  data.entry.submissions.each do |entry|
     proxy "/story/#{entry.slug}.html", "/story.html", :locals => { 
-      :entry_name => entry.subject,
+      :entry_name => entry.headline,
       :entry_author => entry.author,
+      :entry_bio => entry.author_bio,
       :entry_pullquote => entry.pullquote,
-      :entry_media => entry.media,
-      :entry_body => entry.entryText,
-      :entry_recs => entry.recs
+      :entry_media => entry.img,
+      :entry_body => entry.text,
+      :entry_twitter => entry.twitter_acct
       }, :ignore => true
   end
 
