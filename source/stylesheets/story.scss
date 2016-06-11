@@ -138,6 +138,10 @@ footer {
   font-family: $accent-stack;
   margin-top: 15px !important;
   margin-bottom: 0 !important;
+
+  a {
+    color: $nbn-purple;
+  }
 }
 
 #twitter-bio {
@@ -168,17 +172,26 @@ footer {
     display: block;
     margin: 0 auto;
     margin-bottom: 5px;
+    width: 100%;
   }
+}
 
-  .credit {
-    margin-bottom: 20px;
-    p {
-      font-family: $text-stack;
-      font-size: 0.65rem;
-      color: #888;
-      font-weight: 300;
-    }
+.story-image {
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: 100%;
   }
+}
+
+table {
+  width: 60%;
+  margin: 0 auto;
 }
 
 .entry-body {
@@ -191,6 +204,13 @@ footer {
     border-top: solid 1px #dfdfdf;
     padding-top: 30px;
   }
+
+  a {
+    color: $nbn-purple;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 @media screen and (max-width : 768px) {
@@ -198,7 +218,7 @@ footer {
         width: 90%;
     }
 
-    .bio {
+    .bio, table {
       width: 90% !important;
     }
 

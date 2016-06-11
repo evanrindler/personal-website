@@ -37,7 +37,6 @@ body {
 }
 
 .intro {
-  font-family: $font-stack;
   width: inherit;
   text-align: center;
   margin-bottom: 4em;
@@ -62,6 +61,7 @@ body {
     text-transform: uppercase;
     font-weight: 600;
     padding: 10px;
+    font-family: $accent-stack;
   }
 }
 

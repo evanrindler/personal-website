@@ -43,7 +43,8 @@ configure :build do
       :entry_pullquote => entry.pullquote,
       :entry_media => entry.img,
       :entry_body => entry.text,
-      :entry_twitter => entry.twitter_acct
+      :entry_twitter => entry.twitter_acct,
+      :entry_slug => entry.slug
       }, :ignore => true
   end
 

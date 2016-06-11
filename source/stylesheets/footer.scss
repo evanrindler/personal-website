@@ -2,7 +2,7 @@
 @import "vars";
 
 footer {
-    font-family: Helvetica, sans-serif;
+    font-family: $font-stack, Helvetica, sans-serif;
     background-color: $nbn-purple;
     color: white;
     margin-top: 50px;
