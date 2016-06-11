@@ -29,6 +29,14 @@ var currentTallest = 0,
 }
 $(document).ready(function() {
 	equalheight('.grid-entry');
+
+	$('.quiz').submit(function(event) {
+		event.preventDefault();
+		var checked = $('input[type="checkbox"]:checked').length;
+		$('#quiz-description').hide();
+		$('.quiz').hide();
+		$('.entry-body').append('<p class="quiz-results">'+ checked + ' out of 30</p><p>You are very Northwestern.</p>');
+	});
 });
 
 $(window).load(function() {
