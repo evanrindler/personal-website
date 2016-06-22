@@ -342,4 +342,14 @@ table {
     .grid-entry {
         width: 100%;
     }
+
+    .entry-details h2{
+      word-wrap: break-word;
+    }
+}
+
+@media screen and (max-width : 480px) {
+  .entry-details h2{
+    font-size:2em;
+  }
 }
