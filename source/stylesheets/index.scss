@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "vars";
+@import "variables";
 @import "social";
 @import "nav";
 @import "footer";
@@ -74,7 +74,7 @@ p {
         font-weight: 400;
         margin-bottom: 5px;
         text-transform: uppercase;
-        color: $nbn-purple;
+        color: purple;
     }
 
     .story-author {

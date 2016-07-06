@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import "colors";
 @import "variables";
 
 .clearfix:after {
@@ -25,23 +24,25 @@
     float: left;
 }
 
-.nbn-logo {
+.personal-logo {
     vertical-align: middle;
     height: 2.5em;
 }
 
 nav {
-    a {
-        color: #501f84;
-        text-decoration: none;
-        background: transparent;
-    }
-
+  font-family: $accent-stack;
+  text-transform: uppercase;
   color: $navbar-font-color;
-  background-color: $primary-color;
+  background-color: $green;
   width: 100%;
   height: $navbar-height-mobile;
   line-height: $navbar-height-mobile;
+
+  a {
+      color: #501f84;
+      text-decoration: none;
+      background: transparent;
+  }
 
   .nav-wrapper {
     position: relative;
@@ -108,9 +109,21 @@ nav {
         margin-bottom: 20px;
     }
 
-    .nbn-logo {
+    .personal-logo {
         height: 4em;
         display: block;
         margin: 0 auto;
     }
+}
+
+@media screen and (max-width : 400px) {
+  nav {
+    height: 150px;
+  }
+
+  #nav-links {
+    li {
+      margin-bottom: 10px;
+    }
+  }
 }
