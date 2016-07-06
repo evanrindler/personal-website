@@ -10,6 +10,14 @@
 *:after {
   box-sizing: border-box;
 }
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+
 .clearfix:after {
   content: "";
   display: table;
@@ -21,6 +29,14 @@
     max-width: 990px;
     margin: 0 auto;
     position: relative;
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -100px; 
+}
+
+.container:after {
+  content: "";
+  display: block;
 }
 
 .extra-masthead {

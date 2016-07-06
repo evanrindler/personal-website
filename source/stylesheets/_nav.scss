@@ -26,17 +26,18 @@
 
 .personal-logo {
     vertical-align: middle;
-    height: 2.5em;
+    height: 3em;
 }
 
 nav {
   font-family: $accent-stack;
   text-transform: uppercase;
   color: $navbar-font-color;
-  background-color: $green;
+  // background-color: $off-white;
+  border-bottom: 1px solid #e3e3e3;
   width: 100%;
-  height: $navbar-height-mobile;
-  line-height: $navbar-height-mobile;
+  height: $navbar-height;
+  line-height: $navbar-height;
 
   a {
       color: #501f84;
