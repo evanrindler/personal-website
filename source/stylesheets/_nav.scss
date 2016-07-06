@@ -1,41 +1,116 @@
 @charset "utf-8";
+@import "colors";
+@import "variables";
 
-.masthead {
-    background-color: #501f84;
-    padding: .5em 0 .375em;
-    text-align: left;
-    width: 100%;
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
+.logo:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.logo {
+    padding: 0 .5em;
+    float: left;
+}
+
+.nbn-logo {
+    vertical-align: middle;
+    height: 2.5em;
+}
+
+nav {
     a {
         color: #501f84;
         text-decoration: none;
         background: transparent;
     }
 
-    .nbn-logo {
-        height: 2em;
+  color: $navbar-font-color;
+  background-color: $primary-color;
+  width: 100%;
+  height: $navbar-height-mobile;
+  line-height: $navbar-height-mobile;
+
+  .nav-wrapper {
+    position: relative;
+    height: 100%;
+
+    i {
+      display: block;
+      font-size: 2rem;
+    }
+  }
+
+  // Navbar Links
+  ul {
+    margin: 0;
+    list-style-type: none;
+
+    li {
+      @include transition(background-color .3s);
+      float: right;
+      padding: 0;
+
+      &:hover, &.active {
+        background-color: rgba(0,0,0,.1);
+      }
+    }
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: $navbar-font-color;
+        display: block;
+        padding: 0 15px;
+    }
+
+    &.left {
+      float: left;
+    }
+  }
+}
+
+@media screen and (max-width : 768px) {
+    nav {
+        height: 130px;
+        line-height: 15px;
+    }
+
+    #nav-links {
+        margin: 0;
+        list-style-type: none;
+        clear: both;
+        width: 100%;
+        padding: 0px;
+        text-align: center;
+        z-index: 2000;
+
+        li {
+            float: none;
+            display: inline-block;
+        }
     }
 
     .logo {
-        padding-left: .5em;
-
+        padding: 0;
+        float: none;
+        margin-bottom: 20px;
     }
 
-    .extra-masthead {
-        color: white;
-        display: inline-table;
-        font-weight: 700;
-        height: 100%;
-        position: relative;
-        top: -.5em;
-        padding-left: 1em;
-
-        a {
-            color: white;
-            display: table-cell;
-            margin-left: .25em;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
+    .nbn-logo {
+        height: 4em;
+        display: block;
+        margin: 0 auto;
     }
 }

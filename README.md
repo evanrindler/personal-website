@@ -1,6 +1,5 @@
-NBN Commencement 2016
+Personal Website
 ====================
-[NBN Commencement 2016](http://apps.northbynorthwestern.com/commencement/2016/)
 
 ## Installation and Development
 
@@ -8,7 +7,7 @@ NBN Commencement 2016
 
 `gem install middleman`
 
-##### Install gems
+##### Install gemws
 
 `bundle install`
 

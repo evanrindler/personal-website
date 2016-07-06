@@ -1,36 +1,8 @@
 ---
 layout: layout
-title: Commencement 2016 | North by Northwestern
+title: Evan Rindler
 ---
 
-<div class="intro">
-	<a href="http://apps.northbynorthwestern.com/commencement/2016/">
-    	<p>North by Northwestern</p>
-    	<span>Commencement 2016</span>
-    </a>
-</div>
-
 <div class="container">
-    <% data.entry.submissions.each_with_index do |e, i| %>
-        <% if [0, 3, 6, 9, 12, 15, 18].include? i %>
-            <div class="clearfix">
-        <% end %>
-        <% relative_path = "story/" %>
-        <% story_link = "#{e.slug}/" %>
-        <div class="grid-entry-pos">
-            <a href= <%= relative_path %><%= story_link %> >
-                <div class="grid-entry">
-                    <img class="circular" src="<%= e.img %>" />
-                    <div class="story-content clearfix">
-                        <p class="story-title"><%= e.headline %></p>
-                        <p class="story-author"><%= e.author %></p>
-                        <p class="story-pullquote"><%= e.pullquote %></p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <% if [2, 5, 8, 11, 14, 17].include? i %>
-            </div>
-        <% end %>
-    <% end %>
+    
 </div>

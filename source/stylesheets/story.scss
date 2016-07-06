@@ -124,28 +124,6 @@ footer {
     font-style: italic;
     letter-spacing: 1px;
   }
-
-  h4 {
-    color: $off-black;
-    font-family: $accent-stack;
-    font-weight: 300;
-    margin-top: 0px;
-    margin-bottom: 5px;
-  }
-}
-
-.bio {
-  font-family: $accent-stack;
-  margin-top: 15px !important;
-  margin-bottom: 0 !important;
-
-  a {
-    color: $nbn-purple;
-  }
-}
-
-#twitter-bio {
-  color: $nbn-purple;
 }
 
 .entry-image-wrapper {
