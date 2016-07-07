@@ -31,21 +31,18 @@ html, body {
     position: relative;
     min-height: 100%;
     /* equal to footer height */
-    margin-bottom: -100px; 
+    margin-bottom: -100px;
 }
 
-.container:after {
-  content: "";
-  display: block;
-}
-
-.extra-masthead {
-  font-family: $font-stack;
-  letter-spacing: 1px;
-}
-
-.circular {
+#animation {
     width: 100%;
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -100px;
+    background-image: url(../images/animation.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
 }
 
 h1 {
@@ -120,11 +117,28 @@ p {
     .grid-entry {
         width: 47%;
     }
+
+    #animation {
+        margin-bottom: 0;
+    }
+
+    footer {
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width : 480px) {
     .grid-entry {
         width: 92%;
         margin-left: 4%;
+    }
+
+    #animation {
+        margin-bottom: 0;
+        background-position: 50% 100%;
+    }
+
+    footer {
+        margin-top: 0;
     }
 }
