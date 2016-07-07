@@ -34,18 +34,10 @@ html, body {
     margin-bottom: -100px;
 }
 
-#animation {
-    width: 100%;
-    min-height: 100%;
-    /* equal to footer height */
-    margin-bottom: -100px;
-    background-image: url(../images/animation.gif);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50% 50%;
-}
-
 h1 {
+    font-size: 3em;
+    color: $blue;
+    font-family: $accent-stack;
     margin: 0;
     padding-top: 20px;
 }
@@ -54,91 +46,71 @@ p {
   margin: 0;
 }
 
-.row {
-    margin-top: 2em;
+/* about page */
+#about {
+    margin-bottom: 20px;
+    border-bottom: 5px solid $blue;
 }
 
-.grid-entry, {
-    float: left;
-    background-color: $white;
-    width: 32%;
-    margin-bottom: 2em;
-    margin-right: 2%;
+.about-wrapper {
+    max-width: 90%;
+    margin: 0 auto;
 }
 
-.grid-entry-pos {
-    a {
-        color: $off-black;
-    }
+.about-me {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    margin-bottom: 120px;
+}
 
-    &:last-child {
-        .grid-entry {
-            margin-right: 0;
-        }   
+.about-image {
+    width: 50%;
+    img {
+        width: 100%;
     }
 }
 
-.story-content {
-    padding: 30px 20px;
+.about-description {
+    width: 50%;
+    font-family: $font-stack;
+    margin-left: 20px;
 
-    .story-title {
-        font-family: $accent-stack;
-        letter-spacing: 2px;
-        font-weight: 400;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-        color: purple;
+    p {
+        margin-bottom: 15px;
+        letter-spacing: 1px;
     }
+}
 
-    .story-author {
-        color: $off-black;
-        font-family: $text-stack;
-        font-style: italic;
-        font-size: 2em;
-        font-weight: 900;
-        letter-spacing: 2px;
-    }
-
-    .story-pullquote {
-        margin-top: 10px;
-        font-family: $text-stack;
-    }
+.intro {
+    font-size: 2em;
+    font-weight: 300;
 }
 
 @media screen and (max-width : 960px) {
-    .grid-entry {
-        width: 30.67%;
-        margin-left: 2%;
-        margin-right: 0;
-    }
+    
 }
 
 @media screen and (max-width : 768px) {
-    .grid-entry {
-        width: 47%;
+    .about-me {
+        display: block;
     }
 
-    #animation {
-        margin-bottom: 0;
+    .about-description {
+        margin-left: 0;
+        width: 100%;
     }
 
-    footer {
-        margin-top: 0;
+    .about-image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .intro {
+        text-align: center;
     }
 }
 
 @media screen and (max-width : 480px) {
-    .grid-entry {
-        width: 92%;
-        margin-left: 4%;
-    }
 
-    #animation {
-        margin-bottom: 0;
-        background-position: 50% 100%;
-    }
-
-    footer {
-        margin-top: 0;
-    }
 }
