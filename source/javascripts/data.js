@@ -12,7 +12,7 @@ function init() {
 var media, stories;
 function readData(data, tabletop) { 
     media = data.Media.elements;
-    stories = data.Stories.elements;
+    // stories = data.Stories.elements;
     showMediaItems();
     // showStoriesList();
 }

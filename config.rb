@@ -40,12 +40,13 @@ configure :build do
   # Enable cache buster
   # activate :asset_hash
 
-  data.stories. each do |entry|
+  data.stories.each do |entry|
     proxy "writing/story/#{entry.slug}.html", "/story.html", :locals => { 
       :entry_name => entry.title,
       :entry_date => entry.date,
       :entry_body => entry.text,
-      :entry_slug => entry.slug
+      :entry_slug => entry.slug,
+      :entry_preview => entry.preview
       }, :ignore => true
   end
 

@@ -14,7 +14,7 @@ title: Evan Rindler
                 <div class="story-entry">
                     <h2><%=s.title %></h2>
                     <p class="story-date"><%=s.date %></p>
-                    <div class="story-preview"><%= truncate(s.text, :length => 300) %></div>
+                    <div class="story-preview"><p><%= s.preview %></p></div>
                     <a href= <%= relative_path %><%= story_link %> ><p class="read-more">Read more...</p></a>
                 </div>
             <% end %>
