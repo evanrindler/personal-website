@@ -1,3 +1,5 @@
+# ENV['SSL_CERT_FILE'] = Gem.loaded_specs['google-api-client'].full_gem_path+'/lib/cacert.pem'
+
 # Reload the browser automatically whenever files change
 activate :livereload
 
@@ -21,6 +23,9 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 activate :directory_indexes
+# activate :google_drive, load_sheets: {
+#   evanrindler: "1so67UnvjZS-XMfnZFaOAVfXp2-jYuW0XEGREtJk2rFg"
+# }
 
 # Build-specific configuration
 configure :build do
@@ -35,18 +40,14 @@ configure :build do
   # Enable cache buster
   # activate :asset_hash
 
-  # data.entry.submissions.each do |entry|
-  #   proxy "/story/#{entry.slug}.html", "/story.html", :locals => { 
-  #     :entry_name => entry.headline,
-  #     :entry_author => entry.author,
-  #     :entry_bio => entry.author_bio,
-  #     :entry_pullquote => entry.pullquote,
-  #     :entry_media => entry.img,
-  #     :entry_body => entry.text,
-  #     :entry_twitter => entry.twitter_acct,
-  #     :entry_slug => entry.slug
-  #     }, :ignore => true
-  # end
+  data.stories. each do |entry|
+    proxy "writing/story/#{entry.slug}.html", "/story.html", :locals => { 
+      :entry_name => entry.title,
+      :entry_date => entry.date,
+      :entry_body => entry.text,
+      :entry_slug => entry.slug
+      }, :ignore => true
+  end
 
   # Use relative URLs
   activate :relative_assets

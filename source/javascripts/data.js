@@ -14,7 +14,7 @@ function readData(data, tabletop) {
     media = data.Media.elements;
     stories = data.Stories.elements;
     showMediaItems();
-    showStoriesList();
+    // showStoriesList();
 }
 
 function showMediaItems() {

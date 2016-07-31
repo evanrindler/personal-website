@@ -10,14 +10,14 @@ layout: story
                     <img class="circular" src="" />
                 </div>
             </div>
-            <h2 class="story-title"></h2>
-            <h3 class="publish-date"></h3>
+            <h2 class="story-title"><%= entry_name %></h2>
+            <h3 class="publish-date"><%= entry_date %></h3>
             <div class="share-icons">
                 <ul class="social">
-                    <a href="http://twitter.com/home?status=North by Northwestern&#8217;s Class of 2016 http://apps.northbynorthwestern.com/commencement/2016/story/ " target="_blank">
+                    <a href="http://twitter.com/home?status=http://evanrindler.com/story " target="_blank">
                         <li class="twitter-share"><span class="icon-twitter"></span></li>
                     </a>
-                    <a href="http://www.facebook.com/sharer.php?u=http://apps.northbynorthwestern.com/commencement/2016/story/" target="_blank">
+                    <a href="http://www.facebook.com/sharer.php?u=http://evanrindler.com/story/" target="_blank">
                         <li class="facebook-share"><span class="icon-facebook"></span></li>
                     </a>
                 </ul>
@@ -25,6 +25,7 @@ layout: story
             
         </div>
         <div class="entry-body">
+            <%= entry_body %>
         </div>
     </div>
 </div>

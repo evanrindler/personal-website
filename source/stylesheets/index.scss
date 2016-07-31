@@ -104,11 +104,14 @@ p {
 }
 
 .story-entry {
-    margin-bottom: 2em;
+    margin-bottom: 40px;
     h2 {
         color: $green;
         font-family: $font-stack;
         font-weight: 600;
+    }
+    a {
+        text-decoration: none;
     }
 }
 
@@ -126,7 +129,7 @@ p {
 .read-more {
     text-transform: uppercase;
     font-family: $font-stack;
-    margin-top: 8px;
+    margin-top: 10px;
     font-size: 0.85em;
     color: #999;
 
